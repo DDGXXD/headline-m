@@ -26,7 +26,7 @@ export function login(params) {
 // }
 
 /**
- * @param { string} mobile
+ * @param { string } mobile
  * @returns { Promise<{ message: string, data: object }>}
  * @description 获取验证码
  */

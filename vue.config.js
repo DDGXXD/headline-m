@@ -10,7 +10,10 @@ module.exports = {
           // 'nav-bar-background-color': '#30aff9',
           // 'nav-bar-icon-color': '#ccc',
           // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
-          hack: `true; @import "${__dirname}/src/styles/theme.less";`
+          hack: `true;
+          @import "${__dirname}/src/styles/theme.less";
+          @import "${__dirname}/node_modules/vant/lib/style/var.less";
+          `
         }
         // }
       }
@@ -18,7 +21,7 @@ module.exports = {
   },
   // 跨域处理
   devServer: {
-    port: '8080', // 设置端口号
+    // port: '8080', // 设置端口号
     proxy: {
       '/api': {
         target: 'http://toutiao.itheima.net', // API服务器的地址
